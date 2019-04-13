@@ -51,7 +51,7 @@ def parse_species(file, species):
 
 def write_out_file(file_name, file):
     with open(file_name, mode='w') as out_file:
-        writer = csv.writer(out_file, delimiter=',',quotechar='"', quoting=csv.QUOTE_MINIMAL)
+        writer = csv.writer(out_file, delimiter=',',quotechar='"', quoting=csv.QUOTE_MINIMAL, lineterminator='\n')
 
         writer.writerow(['Species', 'Country'])
         count = 0
